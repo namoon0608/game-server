@@ -1,125 +1,131 @@
-# **SimpleGameHosting Frontend Coding Assignment**
+# Minecraft Server Dashboard
 
-Welcome to the SimpleGameHosting coding assignment! 🎉 We’re excited to see your skills in action. This assignment is designed to assess your ability to create clean, reusable, and well-styled React components while working with Tailwind CSS and JSON data.
+A web application to display and manage Minecraft servers. Each server card provides details about the server, such as its version, region, number of players, status, and mods. Users can start or stop servers directly from the dashboard.
 
----
+## Features
 
-## **Overview**
+-   **Server Overview**: View detailed information about Minecraft servers, including:
+    -   Server Name
+    -   Version
+    -   Region
+    -   Player Count
+    -   Status (Online/Offline)
+    -   Type (e.g., Survival, Creative, Hardcore)
+    -   Mods Installed
+-   **Dynamic Status Updates**: Start or stop a server with a single button click.
+-   **Responsive Design**: Fully responsive layout, suitable for both desktop and mobile devices.
+-   **Dark Mode**: A sleek dark-themed interface for better visibility and aesthetics.
 
-Your task is to build a dynamic card-based UI to display server details fetched from an API endpoint. You’ll use React, Tailwind CSS, and optionally other libraries, to create an elegant, responsive layout.
+## Screenshot
 
-The provided code already fetches server data from a mock API and displays it as JSON on the page. Your job is to replace the JSON display with a set of styled, reusable **ServerCard** components.
+![Minecraft Server Dashboard](./public/Screenshot.png)
 
----
+## Technologies Used
 
-## **Getting Started**
+-   **Frontend**:
+    -   [Next.js](https://nextjs.org/)
+    -   [TailwindCSS](https://tailwindcss.com/)
+    -   [shadcn/ui](https://ui.shadcn.com/)
+    -   [clsx](https://github.com/lukeed/clsx)
+-   **UI Components**:
+    -   Custom `Button` component for user interactions.
+    -   Server cards displaying server details.
+
+## Getting Started
 
 ### Prerequisites
 
-- **Node.js**: Version v22.12.0 or higher
-- **npm**: Version 11.0 or higher (or preferred package manager)
-- A code editor, like **VSCode** or **NeoVim**
+-   Node.js (v16+)
+-   Yarn or npm
 
-### Setup
+### Installation
 
 1. Clone the repository:
-   ```
-   git clone https://github.com/simplegamehosting/frontend-assignment.git
-   ```
-   ```
-   cd frontend-assignment
-   ```
+
+    ```bash
+    git clone git@github.com:namoon0608/game-server.git
+    cd game-server
+    ```
+
 2. Install dependencies:
-   ```
-   npm install
-   ```
-3. Run the development server:
-   ```
-   npm run dev
-   ```
-4. Open your browser at http://localhost:3000 to view the project.
 
-# **Your Task**
+    ```bash
+    yarn install
+    ```
 
-1. **Build a Reusable Card Component**:
+    or
 
-   - Display the following details about each server:
+    ```bash
+    npm install
+    ```
 
-     - **Server Name**
-     - **Game Name**
-     - **Player Count**
-     - **Server Status** (e.g., "Online"/"Offline")
-     - **Version**
+3. Start the development server:
 
-   - Bonus points for displaying any additional data creatively.
+    ```bash
+    yarn dev
+    ```
 
-2. **Use Tailwind CSS**:
+    or
 
-   - Style the card components using Tailwind CSS. Feel free to reference the existing styles in the codebase.
+    ```bash
+    npm run dev
+    ```
 
-3. **Responsiveness**:
+4. Open the app in your browser:
+    ```
+    http://localhost:3000
+    ```
 
-   - Ensure the cards look great on mobile, tablet, and desktop.
+### Deployment
 
-4. **Optional Extras**:
+1. Build the application:
 
-   - Add a **light/dark mode toggle**.
-   - **Organize your component into a separated components directory**.
+    ```bash
+    yarn build
+    ```
 
-5. **Push Your Work**:
-   - When complete, push your work to a **public GitHub repository** and share the link with us.
+    or
 
-# **Evaluation Criteria**
+    ```bash
+    npm run build
+    ```
 
-We’ll evaluate your submission based on:
+2. Start the production server:
+    ```bash
+    yarn start
+    ```
+    or
+    ```bash
+    npm start
+    ```
 
-1. **Functionality**:
+## How to Use
 
-   - Does the card display all server data correctly?
-   - Are the interactive features (if added) working as expected?
+1. View the list of servers in the dashboard.
+2. Each server card displays detailed information about the server.
+3. Use the "Start Server" or "Stop Server" button to change the server's status.
+4. The server status and indicator will update dynamically.
 
-2. **Code Quality**:
+## Project Structure
 
-   - Is the code modular, reusable, and clean?
-   - Does it follow React and Tailwind best practices?
+```
+src/
+├── components/
+│   ├── ServerCard.tsx      # Displays server information and actions
+│   ├── modeToggle.tsx      # Trigger for Dark mode
+│   ├── theme-provider.tsx  # Theme attributes for child components
+│   ├── ui/
+│   │   └── Button.tsx      # Reusable button component
+├── app/
+│   ├── globals.css         # Global styles
+│   └── page.tsx            # Main dashboard page
+tailwind.config.ts          # TailwindCSS configuration
+```
 
-3. **Design and Styling**:
+## License
 
-   - Is the design modern, responsive, and visually appealing?
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
-4. **Extra Features**:
-   - Have you gone above and beyond to add optional extras or improve the UX?
+```
 
-# **Submission** 📤
-
-1. **Complete the assignment** and thoroughly test your work to ensure everything functions as expected.
-2. **Push your code** to a **public GitHub repository** for us to review.
-3. **Share the repository link** with us by replying to the email that sent you the original assignment link.
-
-We’re looking forward to seeing what you build! 💻✨
-
-# **FAQs**
-
-### 🤔 Can I use third-party UI libraries?
-
-Yes, you can use any libraries (e.g., `react-icons`, `shadCN`) to help you build the UI. Feel free to leverage tools that make your work efficient and stylish! ✨
-
-### 🤖 Can I use AI tools like ChatGPT or GitHub Copilot?
-
-Yes, as long as you fully understand the code that’s being generated. It will be obvious if you don’t, so make sure you review and adapt the code where necessary. Be smart about using AI to assist your creativity, not replace it! 🚀
-
-### ⏳ Is there a time limit for this assignment?
-
-We expect you to complete this task within **7 days** of receiving it. Don’t worry—take your time to showcase your best work! 🗓️
-
-### ❓ Can I ask questions if something is unclear?
-
-Absolutely! 🙌 Feel free to reach out with any questions about the assignment. We’re here to help and want to see you succeed. 💬
-
-# **Tips for Success** 🏆
-
-- **Keep It Simple**: 🎯 Focus on meeting the core requirements first. Then, if you have time, work on the optional extras to really shine.
-- **Write Readable Code**: 🧹 Use comments, consistent formatting, and meaningful variable/component names.
-- **Test Your Work**: ✅ Ensure your components work correctly on all screen sizes. A smooth, responsive design will wow us!
-- **Show Creativity**: 🌟 Use your skills and creativity to make the UI stand out. Bonus points for thoughtful extras like animations or clever use of data.
-- **Have Fun**: 🎉 Enjoy the process, and don’t stress! This is your chance to show off what you can do.
+```

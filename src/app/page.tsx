@@ -49,8 +49,6 @@ export default function Home() {
         fetchServerData();
     }, []);
 
-    console.log(serverData);
-
     return (
         <div
             className={clsx(
