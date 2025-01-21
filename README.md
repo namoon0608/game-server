@@ -78,6 +78,10 @@ A web application to display and manage Minecraft servers. Each server card prov
 
 ### Deployment
 
+The application is deployed on Vercel. You can access it using the following URL:
+
+[Game Server Management App](https://game-server-tau.vercel.app/)
+
 1. Build the application:
 
     ```bash
